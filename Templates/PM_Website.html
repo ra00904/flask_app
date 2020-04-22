@@ -1,11 +1,16 @@
-<html>
-<head>
-<title>Project Management Website</title>
-<link rel="stylesheet" type="text/css" href="intern.css">
+{% extends "base.html" %} 
 
-</head>
+{% block title %} 
+Project Management Website
+{% endblock %}
 
-<body>
+{% block content %} 
+<article>   
+    <header>
+        <h1>Welcome!</h1>
+        <p>The project website will serve as a repository for all the project documentations and phases to include project proposal, project charter, weekly log and deliverables for each project phase (i.e.,planning, analysis, design, implementation)</p>
+    </header>
+</article>
 <h1 class="banner">Project Management Website</h1>
 
 <div class="nav" name="navi" id="navi">
@@ -26,7 +31,7 @@
 <div class="content" name="content" id="content">
 <span class="goldline">Project Website</span><br><br>
 
-<p>The project website will serve as a repository for all the project documentations and phases to include project proposal, project charter, weekly log and deliverables for each project phase (i.e.,planning, analysis, design, implementation).</p>
+
 <br>
 </br>
 <p><u><b>Stakeholders</p></u></b>
@@ -34,4 +39,5 @@
 <p>Professor Canedo - Project Sponsor</p>
 
 </body>
-</html>
+      
+{% endblock %}

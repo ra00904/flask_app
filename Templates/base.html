@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block title %} {% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                                    <!-- Create dynamic URLs in Flask with URL_for() function-->
+        <link rel="stylesheet" href="{{url_for('static', filename = 'css/normalize.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <!-- Create hyperlink to direct user back to index.html -->
+                <!-- Old Code: <h1 class="title">Configuration and Asset Management</h1>-->
+                <a href="{{ url_for('index')}}"><h1 class="title">Configuration and Asset Management</h1></a>
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('index')}}">Home</a></li>
+                        <li><a href="{{ url_for('log')}}">Login</a></li>
+                        <li><a href="{{ url_for('PM_Website')}}">Project Management Website</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+                {% block content %}
+                 {% endblock %}
+
+               
+
+               
+               
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>Points of Contact (POC):</h3>
+                <p>Ralph Anderson Jr</p>
+                <p>randers4_gsou@go.view.usg.edu </p>
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
