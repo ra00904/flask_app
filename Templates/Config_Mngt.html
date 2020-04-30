@@ -6,11 +6,12 @@ Config_Mngt
 
 {% block content %} 
 
->
+
 <body>
     <h1>Config_Mngt</h1>
-    <p>List of cofiguration files and assets.</p>
-<!-- more code goes here. Key value pairs. Assets and attributes -->
+    <li><a href="{{ url_for('get_lists')}}">Lists of Assets</a></li>
+    <br>
+    <br>
     <a href="/logout">Logout</a>
 </body>
 {% endblock %}

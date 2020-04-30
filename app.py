@@ -5,8 +5,9 @@
 #Date Modified: April 22 6, 2016
 #
 
-from flask import Flask, render_template, redirect, url_for, request, session, flash
+from flask import Flask, render_template, redirect, url_for, request, session, flash, jsonify
 from functools import wraps
+from mock_data import lists
 
 
 app = Flask(__name__)
@@ -24,11 +25,35 @@ def index() :
 @app.route('/PM_Website')
 def PM_Website() :
     return render_template('PM_Website.html') 
+#Routes to PM_Website documents
 
+
+
+
+@app.route('/PM_Website/PCharter')
+def PC() :
+    return render_template('PC.html') 
+
+@app.route('/PM_Website/PPlan')
+def PPL() :
+    return render_template('PPlan.html')
+
+@app.route('/PM_Website/WLog')
+def WR() :
+    return render_template('WR.html')
 
 @app.route('/Config_Mngt')
 def Config_Mngt() :
 	return render_template('Config_Mngt.html')
+
+#route to handle displaying the lists of assets
+
+@app.route("/lists", methods=['GET'])
+def get_lists():
+    return jsonify({'lists': lists})
+
+
+
 #route for login page
 @app.route('/log', methods=['GET', 'POST'])
 def log():
@@ -48,9 +73,10 @@ def log():
 def logout():
 	session.pop ('logged_in', None)
 	flash('You were logged out')
-	return redirect(url_for ('/'))
+	return redirect(url_for ('index'))
+
 
 	
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run()
     
