@@ -11,6 +11,7 @@ image: ![] (https://raw.githubusercontent.com/ra00904/flask_app/master/static/Im
  ## Nonfunctional Requirements
 1. Operational
 * The system should be compliant with Web Content Accessibility Guidelines (WCAG)
+
 2. Performance 
 * Interaction processing between the user and the system should not exceed two seconds.
 
@@ -18,6 +19,5 @@ image: ![] (https://raw.githubusercontent.com/ra00904/flask_app/master/static/Im
 * System will have login function
 
  # Bugs
- * Log in function does not dsplay loging prompt
- # Bugs
- Log in function does not dsplay loging prompt.
+ * Login function does not dsplay loging prompt
+
