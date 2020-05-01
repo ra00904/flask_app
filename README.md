@@ -19,5 +19,5 @@ image: ![] (https://raw.githubusercontent.com/ra00904/flask_app/master/Configura
 * System will have login function
 
  # Bugs
- * Login function does not dsplay loging prompt
+ * Login function does not display loging prompt
 
